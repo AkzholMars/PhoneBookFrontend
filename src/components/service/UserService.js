@@ -1,11 +1,11 @@
 import axios from "axios";
 
 class UserService {
-  static BASE_URL = "http://localhost:8080";
+  static BASE_URL = "http://192.168.99.97:8080";
 
   static async login(email, password) {
     try {
-      const response = await axios.post(`${BASE_URL}/auth/login`, {
+      const response = await axios.post(`${UserService.BASE_URL}/auth/login`, {
         email,
         password,
       });
@@ -17,9 +17,13 @@ class UserService {
 
   static async register(userData, token) {
     try {
-      const response = await axios.post(`${BASE_URL}/auth/register`, userData, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const response = await axios.post(
+        `${UserService.BASE_URL}/auth/register`,
+        userData,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       return response.data;
     } catch (err) {
       throw err;
@@ -28,7 +32,9 @@ class UserService {
 
   static async getUsers() {
     try {
-      const response = await axios.get(`${BASE_URL}/public/get-users`);
+      const response = await axios.get(
+        `${UserService.BASE_URL}/public/get-users`
+      );
       return response.data;
     } catch (err) {
       throw err;
@@ -37,9 +43,12 @@ class UserService {
 
   static async getAllUsers(token) {
     try {
-      const response = await axios.get(`${BASE_URL}/admin/get-all-users`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const response = await axios.get(
+        `${UserService.BASE_URL}/admin/get-all-users`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       return response.data;
     } catch (err) {
       throw err;
@@ -48,9 +57,12 @@ class UserService {
 
   static async getYourProfile(token) {
     try {
-      const response = await axios.get(`${BASE_URL}/adminuser/get-profile`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const response = await axios.get(
+        `${UserService.BASE_URL}/adminuser/get-profile`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       return response.data;
     } catch (err) {
       throw err;
@@ -59,9 +71,12 @@ class UserService {
 
   static async getUserById(userId, token) {
     try {
-      const response = await axios.get(`${BASE_URL}/admin/get-user/${userId}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const response = await axios.get(
+        `${UserService.BASE_URL}/admin/get-user/${userId}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       return response.data;
     } catch (err) {
       throw err;
@@ -71,7 +86,7 @@ class UserService {
   static async deleteUser(userId, token) {
     try {
       const response = await axios.delete(
-        `${BASE_URL}/admin/delete/${userId}`,
+        `${UserService.BASE_URL}/admin/delete/${userId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -85,7 +100,7 @@ class UserService {
   static async updateUser(userId, userData, token) {
     try {
       const response = await axios.put(
-        `${BASE_URL}/admin/update/${userId}`,
+        `${UserService.BASE_URL}/admin/update/${userId}`,
         userData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -100,7 +115,7 @@ class UserService {
   static async resetPassword(userId, userData, token) {
     try {
       const response = await axios.put(
-        `${BASE_URL}/admin/reset-password/${userId}`,
+        `${UserService.BASE_URL}/admin/reset-password/${userId}`,
         userData,
         {
           headers: { Authorization: `Bearer ${token}` },
