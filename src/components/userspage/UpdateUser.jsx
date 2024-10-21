@@ -59,85 +59,85 @@ function UpdateUser() {
   };
 
   return (
-    <section class="bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-white">
-      <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h2 class="mb-4 text-xl font-bold ">
+    <section className="bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-white">
+      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+            <h2 className="mb-4 text-xl font-bold ">
               Обновление профиля сотрудника
             </h2>
             <form
               onSubmit={handleSubmit}
-              class="space-y-4 md:space-y-4 w-full max-w-lg text-gray-900 dark:text-white"
+              className="space-y-4 md:space-y-4 w-full max-w-lg text-gray-900 dark:text-white"
             >
-              <div class="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
-                <div class="sm:col-span-2">
-                  <label class="block font-medium">ФИО:</label>
+              <div className="grid gap-4 mb-4 sm:grid-cols-2 sm:gap-6 sm:mb-5">
+                <div className="sm:col-span-2">
+                  <label className="block font-medium">ФИО:</label>
                   <input
                     type="text"
                     name="name"
                     value={userData.name}
                     onChange={handleInputChange}
-                    class="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   />
                 </div>
                 <div>
-                  <label class="block font-medium ">Почта:</label>
+                  <label className="block font-medium ">Почта:</label>
                   <input
                     type="email"
                     name="email"
                     value={userData.email}
                     onChange={handleInputChange}
-                    class="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   />
                 </div>
                 <div>
-                  <label class="block font-medium ">Управление:</label>
+                  <label className="block font-medium ">Управление:</label>
                   <input
                     type="text"
                     name="department"
                     value={userData.department}
                     onChange={handleInputChange}
-                    class="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   />
                 </div>
                 <div>
-                  <label class="block font-medium ">Должность:</label>
+                  <label className="block font-medium ">Должность:</label>
                   <input
                     type="text"
                     name="position"
                     value={userData.position}
                     onChange={handleInputChange}
-                    class="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   />
                 </div>
-                <div class="w-full">
-                  <label class="block font-medium  ">Телефон:</label>
+                <div className="w-full">
+                  <label className="block font-medium  ">Телефон:</label>
                   <input
                     type="text"
                     name="phone"
                     value={userData.phone}
                     onChange={handleInputChange}
-                    class="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   />
                 </div>
                 <div>
-                  <label class="block font-medium  ">Роль:</label>
+                  <label className="block font-medium  ">Роль:</label>
                   <select
                     name="role"
                     value={userData.role}
                     onChange={handleInputChange}
-                    class="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-200 border border-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   >
                     <option value="USER">USER</option>
                     <option value="ADMIN">ADMIN</option>
                   </select>
                 </div>
               </div>
-              <div class="flex items-center space-x-4">
+              <div className="flex items-center space-x-4">
                 <button
                   type="submit"
-                  class=" w-full border rounded-lg border-blue-500 text-blue-500 hover:bg-blue-600 focus:ring-blue-900 font-bold py-2 px-4 rounded-lg hover:border-white hover:text-white"
+                  className=" w-full border rounded-lg border-blue-500 text-blue-500 hover:bg-blue-600 focus:ring-blue-900 font-bold py-2 px-4 rounded-lg hover:border-white hover:text-white"
                 >
                   Обновить
                 </button>

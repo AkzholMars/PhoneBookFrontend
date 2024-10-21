@@ -21,32 +21,32 @@ function HomePage() {
   };
 
   return (
-    <div class="bg-gray-200 dark:bg-gray-800 flex flex-col">
+    <div className="bg-gray-200 dark:bg-gray-800 flex flex-col">
       <br />
-      <h2 class="self-center text-gray-800 text-2xl font-semibold whitespace-nowrap dark:text-white">
+      <h2 className="self-center text-gray-800 text-2xl font-semibold whitespace-nowrap dark:text-white">
         Телефонный справочник
       </h2>
       <br />
-      <div class="h-full  px-6 py-8 mx-auto lg:py-0">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-900 dark:text-gray-300">
-          <thead class="text-xs text-gray-100 uppercase bg-gray-500 dark:bg-gray-700 dark:text-gray-400">
+      <div className="h-full  px-6 py-8 mx-auto lg:py-0">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-900 dark:text-gray-300">
+          <thead className="text-xs text-gray-100 uppercase bg-gray-500 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" className="px-6 py-3">
                 ФИО
               </th>
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">Почта</div>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">Почта</div>
               </th>
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">
                   Управление/Представительство
                 </div>
               </th>
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">Должность</div>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">Должность</div>
               </th>
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">Телефон</div>
+              <th scope="col" className="px-6 py-3">
+                <div className="flex items-center">Телефон</div>
               </th>
             </tr>
           </thead>
@@ -54,13 +54,13 @@ function HomePage() {
             {users.map((user) => (
               <tr
                 key={user.id}
-                class="border-b border-gray-900 dark:bg-gray-800 dark:border-gray-700"
+                className="border-b border-gray-900 dark:bg-gray-800 dark:border-gray-700"
               >
-                <td class="px-6 py-4">{user.name}</td>
-                <td class="px-6 py-4">{user.email}</td>
-                <td class="px-6 py-4">{user.department}</td>
-                <td class="px-6 py-4">{user.position}</td>
-                <td class="px-6 py-4">{user.phone}</td>
+                <td className="px-6 py-4">{user.name}</td>
+                <td className="px-6 py-4">{user.email}</td>
+                <td className="px-6 py-4">{user.department}</td>
+                <td className="px-6 py-4">{user.position}</td>
+                <td className="px-6 py-4">{user.phone}</td>
               </tr>
             ))}
           </tbody>
