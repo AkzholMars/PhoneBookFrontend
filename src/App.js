@@ -15,7 +15,7 @@ import ResetPasswordPage from "./components/userspage/ResetPasswordPage";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App ">
+      <div className="App dark:bg-gray-800 h-screen">
         <Navbar />
         <div className="content">
           <Routes>

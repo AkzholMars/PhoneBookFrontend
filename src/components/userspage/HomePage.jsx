@@ -30,7 +30,7 @@ function HomePage() {
   });
 
   return (
-    <div className="h-screen bg-gray-200 dark:bg-gray-800 flex flex-col">
+    <div className="h-full bg-gray-200 dark:bg-gray-800 flex flex-col">
       <br />
       <h2 className="self-center text-gray-800 text-2xl font-semibold whitespace-nowrap dark:text-white">
         Телефонный справочник
