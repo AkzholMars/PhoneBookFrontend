@@ -22,7 +22,11 @@ function HomePage() {
   };
 
   const filterUsers = users.filter((ouruser) => {
-    return ouruser.name.toLowerCase().includes(value.toLowerCase());
+    return (
+      ouruser.name.toLowerCase().includes(value.toLowerCase()) ||
+      ouruser.department.toLowerCase().includes(value.toLowerCase()) ||
+      ouruser.position.toLowerCase().includes(value.toLowerCase())
+    );
   });
 
   return (
